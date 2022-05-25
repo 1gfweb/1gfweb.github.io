@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-25T17:35:52-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Gaston Ferreira</title><subtitle>Analista - Desarrollador de Software - Programador</subtitle><entry><title type="html">Generador de Contraseñas</title><link href="http://localhost:4000/blog/generador-passwords" rel="alternate" type="text/html" title="Generador de Contraseñas" /><published>2022-05-20T00:00:00-03:00</published><updated>2022-05-20T00:00:00-03:00</updated><id>http://localhost:4000/blog/generador-passwords</id><content type="html" xml:base="http://localhost:4000/blog/generador-passwords"><![CDATA[<p>Esta herramienta escrita en Python es capas de generar contraseñas seguras y a su ves usa un  algoritmo de criptografía el cual es MD5 (En criptografía, MD5 es un algoritmo de reducción criptográfico de 128 bits ampliamente usado).</p>
+
+<hr />
+
+<h1 id="generador-de-contraseñas-">Generador de Contraseñas <br /></h1>
+
+<h3 id="para-usar-el-codigo-se-necesitaran-importar-las-sigentes-librerias-">Para usar el codigo se necesitaran importar las sigentes librerias <br /></h3>
+
+<p><code class="language-plaintext highlighter-rouge">random</code><br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">werkzeug</code>
+<br /><br /></p>
+
+<p>para installarla escribir el sigente comando en la terminal:</p>
+
+<p><code class="language-plaintext highlighter-rouge">pip install random</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">pip install Werkzeug</code></p>
+
+<h3 id="el-codigo-es-el-siguiente-">El codigo es el siguiente <br /></h3>
+
+<blockquote>
+  <p>import random <br />
+from werkzeug.security import generate_password_hash <br /></p>
+
+  <p><br />print()
+<br />print()
+<br />print(‘░██████╗░░░░██████╗░██╗████████╗░██████╗’)
+<br />print(‘██╔════╝░░░░██╔══██╗██║╚══██╔══╝██╔════╝’)
+<br />print(‘██║░░██╗░░░░██████╦╝██║░░░██║░░░╚█████╗░’)
+<br />print(‘██║░░╚██╗░░░██╔══██╗██║░░░██║░░░░╚═══██╗’)
+<br />print(‘╚██████╔╝██╗██████╦╝██║░░░██║░░░██████╔╝’)
+<br />print(‘░╚═════╝░╚═╝╚═════╝░╚═╝░░░╚═╝░░░╚═════╝░’)
+<br />print()
+<br />print()
+<br />
+print()
+<br />
+rango = int(input(“Nuemro de Contraseñas Max(100): “)) <br />
+print() <br />
+longitud = int(input(“Longitud de Contraseñas Max(86): “)) <br />
+print() <br />
+<br />
+minus = “abcdefghijklmnopqrstuvwxyz” <br />
+mayus = minus.upper() <br />
+numeros = “0123456789” <br />
+simbolos = “@()[]{}+*.:,;/-_‘¡!€%$&amp;=” <br />
+<br />
+base = minus + mayus + numeros + simbolos <br />
+<br />
+for _ in range(rango): <br />
+    muestra = random.sample(base, longitud) <br />
+    password = ““.join(muestra) <br />
+   password_Encrip = generate_password_hash(password) <br />
+    print(“{} =&gt; {}”.format(password, password_Encrip)) <br />
+<br /></p>
+</blockquote>
+
+<p><br /></p>
+
+<p><strong>Una ves copidado el codigo</strong><br /></p>
+
+<p>Copiar y Pegar el codido en un archivo <strong>.txt</strong> y cambiar la estencion a <strong>.py</strong> y ejecutarlo con python3 si no lo tiene descargado puede ir al sigente link: <a href="https://www.python.org/downloads/">Descargar Python</a>
+<br /><br /></p>
+
+<p><strong>Para ejecutarlo:</strong></p>
+<ol>
+  <li>Abir la cmd o la Terminal</li>
+  <li>Escrivir: <strong>python3 “ruta del archivo”</strong></li>
+  <li>Precionamos Enter</li>
+  <li>Introducimos el numero de Contraseñas a Generar y la longitud de las mismas</li>
+</ol>]]></content><author><name></name></author><category term="Utilidades" /><category term="Python" /><category term="Herramienta" /><category term="Programa" /><summary type="html"><![CDATA[Un simple programa escrito en Python para generar contraseñas seguras]]></summary></entry><entry><title type="html">Escaner de puertos</title><link href="http://localhost:4000/blog/escaner-puerto" rel="alternate" type="text/html" title="Escaner de puertos" /><published>2020-05-10T00:00:00-03:00</published><updated>2020-05-10T00:00:00-03:00</updated><id>http://localhost:4000/blog/escaner-puerto</id><content type="html" xml:base="http://localhost:4000/blog/escaner-puerto"><![CDATA[<p>El escaner de puertos permite conocer que puertos están abiertos en una dirección IP o host. existen 65535 puertos los cuales pueden estar abiertos o cerrados dependiendo de los programas que se esten ejecutando.
+<br />
+Nmap es un programa de código abierto que sirve para efectuar rastreo de puertos escrito originalmente por Gordon Lyon (más conocido por su alias Fyodor Vaskovich1​) y cuyo desarrollo se encuentra hoy a cargo de una comunidad. Fue creado originalmente para Linux aunque actualmente es multiplataforma. Se usa para evaluar la seguridad de sistemas informáticos, así como para descubrir servicios o servidores en una red.</p>
+
+<ul>
+  <li><a href="https://nmap.org/">Link de la Pagina de Nmap</a></li>
+</ul>
+
+<hr />
+
+<h1 id="escaner-de-puertos-">Escaner de puertos <br /></h1>
+
+<h3 id="para-usar-el-codigo-se-necesitaran-importar-las-sigentes-librerias-">Para usar el codigo se necesitaran importar las sigentes librerias <br /></h3>
+
+<p><code class="language-plaintext highlighter-rouge">nmap</code>
+<br /><br /></p>
+
+<p>para installarla escribir el sigente comando en la terminal:</p>
+
+<p><code class="language-plaintext highlighter-rouge">pip install python-nmap</code></p>
+
+<h3 id="el-codigo-es-el-siguiente-">El codigo es el siguiente <br /></h3>
+
+<blockquote>
+  <p><br />import nmap
+<br />
+<br />print()
+<br />print()
+<br />print(‘░██████╗░░░░██████╗░██╗████████╗░██████╗’)
+<br />print(‘██╔════╝░░░░██╔══██╗██║╚══██╔══╝██╔════╝’)
+<br />print(‘██║░░██╗░░░░██████╦╝██║░░░██║░░░╚█████╗░’)
+<br />print(‘██║░░╚██╗░░░██╔══██╗██║░░░██║░░░░╚═══██╗’)
+<br />print(‘╚██████╔╝██╗██████╦╝██║░░░██║░░░██████╔╝’)
+<br />print(‘░╚═════╝░╚═╝╚═════╝░╚═╝░░░╚═╝░░░╚═════╝░’)
+<br />print()
+<br />print()
+<br />
+<br />
+print(“[Info] Herramienta para escanear los puertos abiertos en una dirección IP”)<br />
+print(“  ||   Escrito en Python y utiliza Nmap”)<br />
+<br />
+ip=input(“[+] IP Objetivo =&gt; “)<br />
+nm = nmap.PortScanner()<br />
+puertos_abiertos=”-p “<br />
+results = nm.scan(hosts=ip,arguments=”-sT -n -Pn -T4”)<br />
+count=0<br />
+#print (results)<br />
+print(“\nHost : %s” % ip)<br />
+print(“State : %s” % nm[ip].state())<br />
+for proto in nm[ip].all_protocols():<br />
+<br />print(“Protocol : %s” % proto)
+<br />	print()
+<br />	lport = nm[ip][proto].keys()
+<br />	sorted(lport)
+<br />	for port in lport:
+<br />		print (“port : %s\tstate : %s” % (port, nm[ip][proto][port][“state”]))
+<br />		if count==0:
+<br />			puertos_abiertos=puertos_abiertos+str(port)
+<br />			count=1
+<br />		else:
+<br />			puertos_abiertos=puertos_abiertos+”,”+str(port)
+<br />
+<br />print(“\nPuertos abiertos: “+ puertos_abiertos +” “+str(ip))
+<br /></p>
+</blockquote>
+
+<p><strong>Una ves copidado el codigo</strong><br /></p>
+
+<p>Copiar y Pegar el codido en un archivo <strong>.txt</strong> y cambiar la estencion a <strong>.py</strong> y ejecutarlo con python3 si no lo tiene descargado puede ir al sigente link: <a href="https://www.python.org/downloads/">Descargar Python</a>
+<br /><br /></p>
+
+<p><strong>Para ejecutarlo:</strong></p>
+<ol>
+  <li>Abir la cmd o la Terminal</li>
+  <li>Escrivir: <strong>python3 “ruta del archivo”</strong></li>
+  <li>Precionamos Enter</li>
+  <li>Introducir la direcion IP que desea Geolocalizar</li>
+</ol>]]></content><author><name></name></author><category term="Utilidades" /><category term="Python" /><category term="Nmap" /><category term="Programa" /><summary type="html"><![CDATA[Un simple programa escrito en Python + nmap para facilitar el escaneo de puertos]]></summary></entry><entry><title type="html">Pidera Papel Tijera</title><link href="http://localhost:4000/blog/pieda-papel-tijera" rel="alternate" type="text/html" title="Pidera Papel Tijera" /><published>2020-05-10T00:00:00-03:00</published><updated>2020-05-10T00:00:00-03:00</updated><id>http://localhost:4000/blog/pieda-papel-tijera</id><content type="html" xml:base="http://localhost:4000/blog/pieda-papel-tijera"><![CDATA[<p>El mitico juego de Piedra Papel o Tijera recreado en python.</p>
+
+<hr />
+
+<h1 id="pidera-papel-tijera-">Pidera Papel Tijera <br /></h1>
+
+<h3 id="para-usar-el-codigo-se-necesitaran-importar-las-sigentes-librerias-">Para usar el codigo se necesitaran importar las sigentes librerias <br /></h3>
+
+<p><code class="language-plaintext highlighter-rouge">random</code>
+<br /><br /></p>
+
+<p>para installarla escribir el sigente comando en la terminal:</p>
+
+<p><code class="language-plaintext highlighter-rouge">pip install random</code></p>
+
+<h3 id="el-codigo-es-el-siguiente-">El codigo es el siguiente <br /></h3>
+
+<blockquote>
+  <p>import random <br />
+<br />print()
+<br />print()
+<br />print(‘░██████╗░░░░██████╗░██╗████████╗░██████╗’)
+<br />print(‘██╔════╝░░░░██╔══██╗██║╚══██╔══╝██╔════╝’)
+<br />print(‘██║░░██╗░░░░██████╦╝██║░░░██║░░░╚█████╗░’)
+<br />print(‘██║░░╚██╗░░░██╔══██╗██║░░░██║░░░░╚═══██╗’)
+<br />print(‘╚██████╔╝██╗██████╦╝██║░░░██║░░░██████╔╝’)
+<br />print(‘░╚═════╝░╚═╝╚═════╝░╚═╝░░░╚═╝░░░╚═════╝░’)
+<br />print()
+<br />print()
+<br /></p>
+
+  <p>aleatorio = random.randrange(0, 3) <br />
+elijePc = “” <br />
+print(“1)Piedra”) <br />
+print(“2)Papel”) <br />
+print(“3)Tijera”) <br />
+opcion = int(input(“Que elijes: “)) <br />
+<br />
+if opcion == 1: <br />
+    elijeUsuario = “piedra” <br />
+elif opcion == 2: <br />
+    elijeUsuario = “papel” <br />
+elif opcion == 3: <br />
+    elijeUsuario = “tijera” <br />
+print(“Tu elijes: “, elijeUsuario) <br />
+<br />
+if aleatorio == 0: <br />
+    elijePc = “piedra” <br />
+elif aleatorio == 1: <br />
+    elijePc = “papel” <br />
+elif aleatorio == 2: <br />
+    elijePc = “tijera” <br />
+print(“PC elijio: “, elijePc) <br />
+print(“…”) <br />
+if elijePc == “piedra” and elijeUsuario == “papel”: <br />
+    print(“Ganaste, papel envulve piedra”) <br />
+elif elijePc == “papel” and elijeUsuario == “tijera”: <br />
+    print(“Ganaste, Tijera corta papel”) <br />
+elif elijePc == “tijera” and elijeUsuario == “piedra”: <br />
+    print(“Ganaste, Piedra pisa tijera”) <br />
+if elijePc == “papel” and elijeUsuario == “piedra”: <br />
+    print(“perdiste, papel envulve piedra”) <br />
+elif elijePc == “tijera” and elijeUsuario == “papel”: <br />
+    print(“perdiste, Tijera corta papel”) <br />
+elif elijePc == “piedra” and elijeUsuario == “tijera”: <br />
+    print(“perdiste, Piedra pisa tijera”) <br />
+elif elijePc == elijeUsuario: <br />
+   print(“empate”) <br />
+<br /></p>
+</blockquote>
+
+<p><br /></p>
+
+<p><strong>Una ves copidado el codigo</strong><br /></p>
+
+<p>Copiar y Pegar el codido en un archivo <strong>.txt</strong> y cambiar la estencion a <strong>.py</strong> y ejecutarlo con python3 si no lo tiene descargado puede ir al sigente link: <a href="https://www.python.org/downloads/">Descargar Python</a>
+<br /><br /></p>
+
+<p><strong>Para ejecutarlo:</strong></p>
+<ol>
+  <li>Abir la cmd o la Terminal</li>
+  <li>Escrivir: <strong>python3 “ruta del archivo”</strong></li>
+  <li>Precionamos Enter y a Jugar</li>
+</ol>]]></content><author><name></name></author><category term="Juegos" /><category term="Python" /><category term="Programa" /><summary type="html"><![CDATA[El mitico juego de Piedra Papel o Tijera recreado en python]]></summary></entry><entry><title type="html">Geolocalizr IPs</title><link href="http://localhost:4000/blog/geolocalizar-ips" rel="alternate" type="text/html" title="Geolocalizr IPs" /><published>2020-04-30T00:00:00-03:00</published><updated>2020-04-30T00:00:00-03:00</updated><id>http://localhost:4000/blog/geolocalizar-ips</id><content type="html" xml:base="http://localhost:4000/blog/geolocalizar-ips"><![CDATA[<p>La Geolocalización de IPs es la identificación de la ubicación geográfica de un dispositivo, como un teléfono móvil, dispositivo, computadora portátil, servidor, etc., mediante el uso de una dirección IP publica.
+este programa puede localizar la ip publica de un dispocitivo ya que esta conectado con una api</p>
+
+<ul>
+  <li><a href="http://ip-api.com/json/">Link de la Api</a></li>
+</ul>
+
+<hr />
+
+<h3 id="para-usar-el-codigo-se-necesitaran-importar-las-sigentes-librerias-">Para usar el codigo se necesitaran importar las sigentes librerias <br /></h3>
+
+<p><code class="language-plaintext highlighter-rouge">requests</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">json</code>
+<br /><br /></p>
+
+<p>En caso de que no esten instaladas, escribir los sigentes comandos en la terminal:</p>
+
+<p><code class="language-plaintext highlighter-rouge">pip install requests</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">pip install json</code></p>
+
+<h3 id="el-codigo-es-el-siguiente-">El codigo es el siguiente <br /></h3>
+
+<blockquote>
+  <p>import requests 
+<br />
+import json
+<br />
+api_url = “http://ip-api.com/json/”
+<br />
+parametros = ‘status,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query’
+<br />
+data = {“fields”:parametros}
+<br /><br />
+def ip_scraping(ip=””):
+<br />	res = requests.get(api_url+ip, data=data)
+<br />	api_json_res = json.loads(res.content)
+<br />	return api_json_res
+if <strong>name</strong> == ‘<strong>main</strong>’:
+<br />print()
+<br />print()
+<br />print(‘░██████╗░░░░██████╗░██╗████████╗░██████╗’)
+<br />print(‘██╔════╝░░░░██╔══██╗██║╚══██╔══╝██╔════╝’)
+<br />print(‘██║░░██╗░░░░██████╦╝██║░░░██║░░░╚█████╗░’)
+<br />print(‘██║░░╚██╗░░░██╔══██╗██║░░░██║░░░░╚═══██╗’)
+<br />print(‘╚██████╔╝██╗██████╦╝██║░░░██║░░░██████╔╝’)
+<br />print(‘░╚═════╝░╚═╝╚═════╝░╚═╝░░░╚═╝░░░╚═════╝░’)
+<br />print()
+<br />print()
+<br />
+<br />
+ip = input(“Ingrese la dirección IP: “)
+<br />
+par = parametros.split(“,”)
+for x in par:
+print(x.upper(), “:”)
+print(ip_scraping(ip)[x])
+print(“\n”)int(“\nPuertos abiertos: “+ puertos_abiertos +” “+str(ip))
+<br /></p>
+</blockquote>
+
+<p><strong>Una ves copidado el codigo</strong><br /></p>
+
+<p>Copiar y Pegar el codido en un archivo <strong>.txt</strong> y cambiar la estencion a <strong>.py</strong> y ejecutarlo con python3 si no lo tiene descargado puede ir al sigente link: <a href="https://www.python.org/downloads/">Descargar Python</a>
+<br /><br /></p>
+
+<p><strong>Para ejecutarlo:</strong></p>
+<ol>
+  <li>Abir la cmd o la Terminal</li>
+  <li>Escrivir: <strong>python3 “ruta del archivo”</strong></li>
+  <li>Precionamos Enter</li>
+  <li>Introducir la direcion IP que desea Geolocalizar</li>
+</ol>]]></content><author><name></name></author><category term="Utilidades" /><category term="Python" /><category term="Herramienta" /><category term="Programa" /><summary type="html"><![CDATA[Un simple programa escrito en Python para la geolocalizacion de equipos mediante su ip publica]]></summary></entry><entry><title type="html">Comparador de Archivos</title><link href="http://localhost:4000/blog/comparar-archivos" rel="alternate" type="text/html" title="Comparador de Archivos" /><published>2020-04-24T00:00:00-03:00</published><updated>2020-04-24T00:00:00-03:00</updated><id>http://localhost:4000/blog/comparar-archivos</id><content type="html" xml:base="http://localhost:4000/blog/comparar-archivos"><![CDATA[<p>Este es un programa el cual sirve para comparar 2 archivos del mismo tipo ya que Cuando llevas mucho tiempo trabajando en un documento, es normal archivar diferentes versiones. Y a veces no recuerdas cual es la más nueva.</p>
+
+<hr />
+
+<h1 id="comparador-de-archivos">Comparador de Archivos</h1>
+
+<h3 id="el-codigo-es-el-siguiente-">El codigo es el siguiente <br /></h3>
+
+<blockquote>
+  <p><br />print()
+<br />print()
+<br />print(‘░██████╗░░░░██████╗░██╗████████╗░██████╗’)
+<br />print(‘██╔════╝░░░░██╔══██╗██║╚══██╔══╝██╔════╝’)
+<br />print(‘██║░░██╗░░░░██████╦╝██║░░░██║░░░╚█████╗░’)
+<br />print(‘██║░░╚██╗░░░██╔══██╗██║░░░██║░░░░╚═══██╗’)
+<br />print(‘╚██████╔╝██╗██████╦╝██║░░░██║░░░██████╔╝’)
+<br />print(‘░╚═════╝░╚═╝╚═════╝░╚═╝░░░╚═╝░░░╚═════╝░’)
+<br />print()
+<br />print()
+<br />
+print()
+<br />
+archivo1 = input(“Ruta del Archivo 1: “)
+archivo2 = input(“Ruta del Archivo 1: “)
+print()
+<br />
+<br />f1 = open(archivo1, “r”) <br />
+f2 = open(archivo2, “r”) <br />
+<br /><br />
+i = 0
+C = 0
+NC = 0<br />
+<br />
+for line1 in f1: 
+   i += 1
+<br />    <br />
+   for line2 in f2: 
+<br />        <br />
+       if line1 == line2:
+           C = C + 1
+<br />
+           print(“Linea “, i, “: CONSIDENCIA”)
+<br />
+           print(“\tArchivo 1:”, line1, end=’’) 
+           print(“\tArchivo 2:”, line2, end=’’)    <br />
+           print()
+<br />
+       else:
+           NC = NC + 1
+<br />
+           print(“Linea”, i, “: NO CONSIDE”) 
+<br />
+           print(“\tArchivo 1:”, line1, end=’’) 
+           print(“\tArchivo 2:”, line2, end=’’)
+           print()
+<br />
+       break
+<br />
+f1.close()                                      <br />
+f2.close()<br />
+<br />
+print(“CONSIDENCIAS: “, C,)      <br />
+print(“NO CONCIDENCIAS: “, NC,)
+<br /></p>
+</blockquote>
+
+<p><strong>Una ves copidado el codigo</strong><br /></p>
+
+<p>Copiar y Pegar el codido en un archivo <strong>.txt</strong> y cambiar la estencion a <strong>.py</strong> y ejecutarlo con python3 si no lo tiene descargado puede ir al sigente link: <a href="https://www.python.org/downloads/">Descargar Python</a>
+<br /><br /></p>
+
+<p><strong>Para ejecutarlo:</strong></p>
+<ol>
+  <li>Abir la cmd o la Terminal</li>
+  <li>Escrivir: <strong>python3 “ruta del archivo”</strong></li>
+  <li>Precionamos Enter</li>
+  <li>Introducir la ruta de los archivos que se desea comparar</li>
+</ol>]]></content><author><name></name></author><category term="Utilidades" /><category term="Python" /><category term="Herramienta" /><category term="Programa" /><summary type="html"><![CDATA[Un simple programa escrito en Python para comparar archivos]]></summary></entry><entry><title type="html">Organizador de archivos</title><link href="http://localhost:4000/blog/organizador-archivos" rel="alternate" type="text/html" title="Organizador de archivos" /><published>2020-04-15T00:00:00-03:00</published><updated>2020-04-15T00:00:00-03:00</updated><id>http://localhost:4000/blog/organizador-archivos</id><content type="html" xml:base="http://localhost:4000/blog/organizador-archivos"><![CDATA[<p>Imagine que tiene una carpeta con cientos de archivos diferentes. Por lo tanto, crea un desastre y ahora desea organizarlos en carpetas. para almacenar archivos con la misma extensión, solo necesita este programa  escrito en Python.</p>
+
+<hr />
+
+<h1 id="organizador-de-archivos-">Organizador de archivos <br /></h1>
+
+<h3 id="para-usar-el-codigo-se-necesitaran-importar-las-sigentes-librerias-">Para usar el codigo se necesitaran importar las sigentes librerias <br /></h3>
+
+<p><code class="language-plaintext highlighter-rouge">os</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">shutil</code>
+<br /><br /></p>
+
+<p>para installarla escribir el sigente comando en la terminal:</p>
+
+<p><code class="language-plaintext highlighter-rouge">pip install os</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">pip install pytest-shutil</code></p>
+
+<h3 id="el-codigo-es-el-siguiente-">El codigo es el siguiente <br /></h3>
+
+<blockquote>
+  <p>import os <br />
+import shutil
+<br />
+<br />print()
+<br />print()
+<br />print(‘░██████╗░░░░██████╗░██╗████████╗░██████╗’)
+<br />print(‘██╔════╝░░░░██╔══██╗██║╚══██╔══╝██╔════╝’)
+<br />print(‘██║░░██╗░░░░██████╦╝██║░░░██║░░░╚█████╗░’)
+<br />print(‘██║░░╚██╗░░░██╔══██╗██║░░░██║░░░░╚═══██╗’)
+<br />print(‘╚██████╔╝██╗██████╦╝██║░░░██║░░░██████╔╝’)
+<br />print(‘░╚═════╝░╚═╝╚═════╝░╚═╝░░░╚═╝░░░╚═════╝░’)
+<br />print()
+<br />print()
+<br />
+<br />
+dirName = input(‘Introducir el Nombre de la Carpeta: ‘)<br />
+li = os.listdir(dirName)<br />
+for i in li:<br />
+   fileName, extencion = os.path.splitext(i)
+<br />  <br />
+   extencion = extencion[1:]<br />
+   if extencion == “”:<br />
+       continue
+<br />
+   if os.path.exists( dirName + ‘/’ + extencion ):<br />
+       shutil.move( dirName + ‘/’ + i, dirName + ‘/’ + extencion + ‘/’ + i )
+<br />      <br />
+   else:
+       os.makedirs( dirName + ‘/’ + extencion )<br />
+       shutil.move( dirName + ‘/’ + i, dirName + ‘/’ + extencion + ‘/’ + i )<br />
+<br /></p>
+</blockquote>
+
+<p><strong>Una ves copidado el codigo</strong><br /></p>
+
+<p>Copiar y Pegar el codido en un archivo <strong>.txt</strong> y cambiar la estencion a <strong>.py</strong> y ejecutarlo con python3 si no lo tiene descargado puede ir al sigente link: <a href="https://www.python.org/downloads/">Descargar Python</a>
+<br /><br /></p>
+
+<p><strong>Para ejecutarlo:</strong></p>
+<ol>
+  <li>Abir la cmd o la Terminal</li>
+  <li>Escrivir: <strong>python3 “ruta del archivo”</strong></li>
+  <li>Precionamos Enter</li>
+  <li>Introducir el nombre de la carpeta</li>
+</ol>]]></content><author><name></name></author><category term="Utilidades" /><category term="Python" /><category term="Herramienta" /><category term="Programa" /><summary type="html"><![CDATA[Un simple programa escrito en Python para organizar archivos]]></summary></entry></feed>

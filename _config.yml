@@ -1,0 +1,98 @@
+# WhatATheme
+markdown: kramdown
+
+# URL of the Site
+url: ''
+# Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
+baseurl: 
+
+# Title of the Site
+title: Gaston Ferreira
+# Description of the Site
+description: Analista - Desarrollador de Software - Programador 
+# URL of Image of the Site
+site-image: 
+# Keywords of the Site
+site-keywords: Site, Template, Theme
+# URL for the Image of custom Favicon
+favicon-url: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.J4lqoEtpWdwCdpust6-fbwAAAA%26pid%3DApi&f=1
+
+# URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
+heroimage: https://i.pinimg.com/originals/48/4b/32/484b325cdb5bdd8bce6d8e3d131fda75.gif
+# https://i.pinimg.com/originals/91/ce/55/91ce552608ac76b33642d4a22058ac93.gif --> Tegnologia
+
+# Social Media and Contact
+# If you don't want to use any icon, you can leave them blank.
+email: 01gastonf@gmail.com
+facebook_username: /
+twitter_username: /
+instagram_username: /
+linkedin_username: 1ferreira-gaston1
+github_username:  G4STT0N
+youtube_channel_id: 
+reddit_username: /
+behance_username: /
+dribbble_username: /
+spotify_username: /
+
+# Google Analytics
+google-analytics: /
+
+# Disqus
+disqus-shortname: /
+
+# Name of the Author
+author-name: Gaston Ferreira
+# URL for the Image of the Author
+author-image: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+# 60 Words About the Author
+author-about: Analista - Desarrollador de Software - Programador 
+# URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
+author-url: 
+
+# SASS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Build settings
+plugins:
+  - jekyll-admin
+  - jekyll-feed
+
+# Permalink
+permalink: "blog/:title"
+
+# Compress
+compress_html:
+  clippings: all
+
+# Defaults
+defaults:
+  -
+    scope:
+      type: 'posts'
+    values:
+      layout: post
+      post-image: ""
+      description: ""
+      tags:
+        - ""
+  -
+    scope:
+      type: 'pages'
+    values:
+      layout: page
+
+# Exclude
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
