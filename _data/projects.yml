@@ -1,4 +1,19 @@
-#- name: Proyecto 1
-#  image: https://cdn.pixabay.com/photo/2015/01/08/18/27/startup-593341_960_720.jpg
-#  link:
-#  description: Sin Asignar
+- name: Oliva Publicidad
+  image: 
+  link: https://www.olivapublicidad.uy/
+  description: Actualizacion de la Web
+
+- name: Print Shop 
+  image: 
+  link: https://www.printshopcarteles.com.uy/
+  description: Actualizacion de la Web
+
+- name: Publinter
+  image: 
+  link: https://www.publinter.com.uy/
+  description: Actualizacion de la Web
+
+- name: Vinos Cattani
+  image: 
+  link: http://www.vinoscattani.com.uy/
+  description: Creacion de la Web
